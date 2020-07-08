@@ -1,0 +1,28 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "npm run build && gh-pages -d docs/.vuepress/dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uzibird/docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uzibird/docs/issues"
+  },
+  "homepage": "https://github.com/uzibird/docs#readme",
+  "devDependencies": {
+    "vuepress": "^1.5.2"
+  }
+}
