@@ -4,8 +4,8 @@ module.exports = {
     title: 'Notes',
 	description: '编程学习笔记',
 	head :[
-		['title','My Notes'],
-		['link',{rel:'icon',href:'/favicon.png'}]
+		['title',{innerHTML:'My Notes'}],
+		['link',{rel:'icon',href:'https://kyun.ltyuanfang.cn/tc/2020/06/05/82c25b65cd02d.png'}]
 	],
 	themeConfig: {
 	    repo: 'https://github.com/uzibird/docs.git',
