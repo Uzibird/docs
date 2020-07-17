@@ -1,0 +1,1 @@
+module.exports = [{"text":"02-vuepress","items":[{"text":"02-vuepress","link":"/02-vuepress/"}]},{"text":"01-Python","items":[{"text":"01-Python","link":"/01-Python/"}]},{"text":"vuepress","items":[{"text":"vuepress","link":"/vuepress/"}]},{"text":"Python","items":[{"text":"Python","link":"/Python/"}]}];
