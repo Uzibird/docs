@@ -1,5 +1,6 @@
 
 module.exports = {
+	
 	base: '/',
     title: 'Notes',
 	description: '编程学习笔记',
@@ -8,16 +9,32 @@ module.exports = {
 		['link',{rel:'icon',href:'https://kyun.ltyuanfang.cn/tc/2020/06/05/82c25b65cd02d.png'}]
 	],
 	themeConfig: {
-	    repo: 'https://github.com/uzibird/docs.git',
-	    repoLabel: 'GitHub',
+		smoothScroll:true,
+	    
 	  	nav: [
-			  { text: 'item', link: '/' },
+			  { text: 'items', link: '/' },
 			  { text:'vuepress', link:'/vuepress/'},
 	  		{ text: 'Python', link: '/Python/' }
 		  ],
-		sidebar: 'auto'
-		
+		sidebar: {
+			
+			'/Python/':[
+				'',
+				'特殊方法'
+			],
+			'/vuepress/':[
+				''
+			],
+			'/':[
+				'',
+				'conductor'
+			]
 		  
-	}
+	},
+	sidebarDepth:2,
+	collapsable:true,
+	displayAllHeaders:true,
 	
+	
+}
 }
