@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>特殊方法 | Notes</title>
+    <title>Python类的特殊方法 | Notes</title>
     <meta name="generator" content="VuePress 1.5.2">
     <title innerHTML="My Notes"></title>
     <link rel="icon" href="https://kyun.ltyuanfang.cn/tc/2020/06/05/82c25b65cd02d.png">
     <meta name="description" content="编程学习笔记">
-    <link rel="preload" href="/assets/css/0.styles.7d2c80c1.css" as="style"><link rel="preload" href="/assets/js/app.6c88cacb.js" as="script"><link rel="preload" href="/assets/js/2.4a16b470.js" as="script"><link rel="preload" href="/assets/js/6.c135f0bf.js" as="script"><link rel="prefetch" href="/assets/js/10.47ed0afa.js"><link rel="prefetch" href="/assets/js/3.1fec26ea.js"><link rel="prefetch" href="/assets/js/4.3517de2a.js"><link rel="prefetch" href="/assets/js/5.c3a8a50e.js"><link rel="prefetch" href="/assets/js/7.ba1ad1b6.js"><link rel="prefetch" href="/assets/js/8.90bbbc85.js"><link rel="prefetch" href="/assets/js/9.8b0f2d7c.js">
+    <link rel="preload" href="/assets/css/0.styles.7d2c80c1.css" as="style"><link rel="preload" href="/assets/js/app.75cbca72.js" as="script"><link rel="preload" href="/assets/js/2.4a16b470.js" as="script"><link rel="preload" href="/assets/js/6.7aafb97b.js" as="script"><link rel="prefetch" href="/assets/js/10.47ed0afa.js"><link rel="prefetch" href="/assets/js/3.1fec26ea.js"><link rel="prefetch" href="/assets/js/4.3517de2a.js"><link rel="prefetch" href="/assets/js/5.c3a8a50e.js"><link rel="prefetch" href="/assets/js/7.791d1c62.js"><link rel="prefetch" href="/assets/js/8.e8b6cacb.js"><link rel="prefetch" href="/assets/js/9.920aca54.js">
     <link rel="stylesheet" href="/assets/css/0.styles.7d2c80c1.css">
   </head>
   <body>
@@ -24,16 +24,36 @@
   vuepress
 </a></div><div class="nav-item"><a href="/Python/" class="nav-link router-link-active">
   Python
-</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Python/" aria-current="page" class="sidebar-link">语法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Python/#类" class="sidebar-link">类</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Python/#some-tip" class="sidebar-link">some tip</a></li><li class="sidebar-sub-header"><a href="/Python/#封装" class="sidebar-link">封装</a></li><li class="sidebar-sub-header"><a href="/Python/#继承" class="sidebar-link">继承</a></li><li class="sidebar-sub-header"><a href="/Python/#多态" class="sidebar-link">多态</a></li></ul></li><li class="sidebar-sub-header"><a href="/Python/#装饰器" class="sidebar-link">装饰器</a></li></ul></li><li><a href="/Python/特殊方法.html" class="active sidebar-link">特殊方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Python/特殊方法.html#概述" class="sidebar-link">概述</a></li><li class="sidebar-sub-header"><a href="/Python/特殊方法.html#特殊方法-2" class="sidebar-link">特殊方法</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="特殊方法"><a href="#特殊方法" class="header-anchor">#</a> 特殊方法</h1> <h2 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h2> <blockquote><p>python类中的一些特殊方法,如repr,del,,getattr,call等</p></blockquote> <h2 id="特殊方法-2"><a href="#特殊方法-2" class="header-anchor">#</a> 特殊方法</h2> <blockquote><ul><li>_<em>_<em>repr</em></em>__</li></ul></blockquote> <div class="language-python extra-class"><pre class="language-python"><code>    <span class="token comment"># cls是一个类，是内存中的一个对象，而print只能输出字符串，所以有cls.__repr__</span>
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Python/" aria-current="page" class="sidebar-link">语法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Python/#类" class="sidebar-link">类</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Python/#some-tip" class="sidebar-link">some tip</a></li><li class="sidebar-sub-header"><a href="/Python/#封装" class="sidebar-link">封装</a></li><li class="sidebar-sub-header"><a href="/Python/#继承" class="sidebar-link">继承</a></li><li class="sidebar-sub-header"><a href="/Python/#多态" class="sidebar-link">多态</a></li></ul></li><li class="sidebar-sub-header"><a href="/Python/#装饰器" class="sidebar-link">装饰器</a></li></ul></li><li><a href="/Python/特殊方法.html" class="active sidebar-link">Python类的特殊方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Python/特殊方法.html#概述" class="sidebar-link">概述</a></li><li class="sidebar-sub-header"><a href="/Python/特殊方法.html#常见的特殊方法" class="sidebar-link">常见的特殊方法</a></li><li class="sidebar-sub-header"><a href="/Python/特殊方法.html#与反射相关的属性和方法" class="sidebar-link">与反射相关的属性和方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Python/特殊方法.html#动态操作属性" class="sidebar-link">动态操作属性</a></li><li class="sidebar-sub-header"><a href="/Python/特殊方法.html#call-属性" class="sidebar-link">\_call_ 属性</a></li></ul></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="python类的特殊方法"><a href="#python类的特殊方法" class="header-anchor">#</a> Python类的特殊方法</h1> <h2 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h2> <blockquote><p>python类中的一些特殊方法,如repr,del,,getattr,call等。 类中各方法的实现原理。对方法的修改以及调用。</p></blockquote> <h2 id="常见的特殊方法"><a href="#常见的特殊方法" class="header-anchor">#</a> 常见的特殊方法</h2> <blockquote><ul><li>_<em>_<em>repr</em></em>__</li></ul></blockquote> <div class="language-python extra-class"><pre class="language-python"><code>    <span class="token comment"># cls是一个类，是内存中的一个对象，而print只能输出字符串，所以有cls.__repr__</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span>cls<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token keyword">print</span><span class="token punctuation">(</span>cls<span class="token punctuation">.</span>__repr__<span class="token punctuation">)</span>
 
-</code></pre></div><blockquote><ul><li>__del__</li></ul></blockquote> <div class="language-python extra-class"><pre class="language-python"><code>    <span class="token comment">#</span>
+</code></pre></div><blockquote><ul><li>__del__  用于销毁Python对象，在任何Python对象将要被系统回收之时，系统都会自动调用该对象的 __del__ 方法</li></ul></blockquote> <div class="language-python extra-class"><pre class="language-python"><code>    <span class="token comment">#只有当系统中无变量引用时，系统才会调用del方法销毁</span>
+    <span class="token keyword">class</span> <span class="token class-name">Item</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span> <span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> price<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+        self<span class="token punctuation">.</span>price <span class="token operator">=</span> price
+    <span class="token comment"># 定义析构函数</span>
+    <span class="token keyword">def</span> <span class="token function">__del__</span> <span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'del删除对象'</span><span class="token punctuation">)</span>
+    <span class="token comment"># 创建一个Item对象，将之赋给im变量</span>
+    im <span class="token operator">=</span> Item<span class="token punctuation">(</span><span class="token string">'鼠标'</span><span class="token punctuation">,</span> <span class="token number">29.8</span><span class="token punctuation">)</span>
+    x <span class="token operator">=</span> im   <span class="token comment"># ①</span>
+    <span class="token comment"># 打印im所引用的Item对象</span>
+    <span class="token keyword">del</span> im
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'--------------'</span><span class="token punctuation">)</span>
 
+<span class="token comment">#输出如下</span>
+    <span class="token comment"># 因为 x 依然在调用 所以兵没有直接销毁，等执行完成后才进行销毁。</span>
+    <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+    <span class="token keyword">del</span> 删除对象
+</code></pre></div><blockquote><ul><li>__dir__ 用于列出该对象内部的所有属性（包括方法）名，返回一个序列。</li></ul></blockquote> <blockquote><ul><li>__dict__属性 查看对象内部存储的所有属性名和属性值组成的字典</li></ul></blockquote> <div class="language- extra-class"><pre><code>可直接调用该方法查看，也可用字典语法来访问或修改指定属性的值。
+</code></pre></div><blockquote><ul><li>__getattr__ ,__setattr__      p178</li></ul></blockquote> <div class="language- extra-class"><pre><code>当程序操作（包括访问 设置 删除）对象的属性时，Python调用此方法
+</code></pre></div><ul><li>__getattributte__(self,name) 当程序访问对象的name属性时候调用</li> <li>__getattr__(self,name) 当程序访问对象的name属性且该属性不存在时被调用</li> <li>__setattr__(self,name,value) 当程序对对象的name赋值时被调用</li> <li>__delattr__(self,name) 当程序删除对象的name属性时调用</li></ul> <p>Python提供的各种方法与类只是语法上的实现，在深入了解后，这些东西都是可改变的，灵活性极高。</p> <h2 id="与反射相关的属性和方法"><a href="#与反射相关的属性和方法" class="header-anchor">#</a> 与反射相关的属性和方法</h2> <h3 id="动态操作属性"><a href="#动态操作属性" class="header-anchor">#</a> 动态操作属性</h3> <ul><li>hasattr(obj,name) 检查obj对象是否包含名为 name 的属性或方法</li> <li>getattr(obj,name[, default]) 获取obj对象中名为 name 的属性的属性值</li> <li>setattr(obj,name,value,/) 将obj对象的name属性设为value</li></ul> <h3 id="call-属性"><a href="#call-属性" class="header-anchor">#</a> __call__ 属性</h3> <p>用hasattr函数判断属性或方法是否存在，但要区分是属性还是方法，则需要进一步判断是否可以调用。</p> <div class="language- extra-class"><pre><code>__可通过判断是否包含__cal__属性来确定是否可调用__
 </code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/Python/" class="prev router-link-active">
         语法
       </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.6c88cacb.js" defer></script><script src="/assets/js/2.4a16b470.js" defer></script><script src="/assets/js/6.c135f0bf.js" defer></script>
+    <script src="/assets/js/app.75cbca72.js" defer></script><script src="/assets/js/2.4a16b470.js" defer></script><script src="/assets/js/6.7aafb97b.js" defer></script>
   </body>
 </html>
